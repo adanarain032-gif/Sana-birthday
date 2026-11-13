@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#28133d"><title>For Sana, with love 💜</title>
+<style>
+:root{--bg:#190e27;--plum:#2b1740;--purple:#70439a;--lilac:#d9b5f2;--pink:#f5c7e9;--white:#fff8ff}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;color:var(--white);font-family:Georgia,serif;background:radial-gradient(ellipse at 15% 10%,#71458c88,transparent 38%),radial-gradient(ellipse at 85% 65%,#9d5ba855,transparent 38%),linear-gradient(145deg,#160c22,#321a49 55%,#1a0e29);min-height:100vh;overflow-x:hidden}
+button{font:inherit}.stars{position:fixed;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(2px 2px at 20px 30px,#fff 50%,transparent 55%),radial-gradient(1px 1px at 90px 80px,#f7d8ff 50%,transparent 55%),radial-gradient(1px 1px at 160px 40px,#fff 50%,transparent 55%);background-size:190px 130px;z-index:0}
+main{position:relative;z-index:1}.screen{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:30px 17px}.glass{width:min(780px,100%);text-align:center;padding:clamp(25px,6vw,58px);border:1px solid #ffffff38;border-radius:30px;background:#ffffff10;box-shadow:0 25px 90px #08030f80;backdrop-filter:blur(13px)}
+.eyebrow{font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#e7c5ff}.script{font-style:italic;color:#f4c7f0}h1,h2{font-weight:normal;margin:15px 0}h1{font-size:clamp(2.6rem,9vw,5.3rem);line-height:1.05}h2{font-size:clamp(2rem,6vw,3.6rem)}p{font-size:clamp(1.05rem,2.6vw,1.22rem);line-height:1.8;color:#f9effb}
+input{width:min(290px,100%);padding:15px 18px;margin:18px auto 12px;display:block;border:1px solid #edcafa;border-radius:30px;background:#fff;color:#321b42;text-align:center;font:16px Arial;outline:none}
+.btn{display:inline-block;border:0;border-radius:30px;padding:14px 25px;background:linear-gradient(110deg,#e0b7f5,#f6c8e8);color:#321b42;font-weight:bold;cursor:pointer;box-shadow:0 9px 28px #09031166;transition:.2s;text-decoration:none}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.err{min-height:22px;color:#ffd0e8;font:13px Arial}.small{font:12px/1.7 Arial,sans-serif;color:#d9c7e7}.hidden{display:none!important}
+.music{position:fixed;right:12px;top:12px;z-index:4;border:1px solid #ffffff55;border-radius:30px;background:#ffffff20;color:white;padding:10px 13px;font:12px Arial;cursor:pointer}
+.cake{font-size:clamp(5rem,19vw,9rem);margin:15px 0;filter:drop-shadow(0 12px 22px #090411)}.flame{display:inline-block;animation:flicker .8s infinite alternate}@keyframes flicker{to{filter:brightness(1.7);transform:scale(1.1)}}
+.page{display:none;min-height:100svh;padding:28px 17px;align-items:center;justify-content:center;flex-direction:column}.page.active{display:flex}.page .inner{width:min(880px,100%);text-align:center}.navrow{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px auto 4px}.secondary{background:#ffffff22;color:#fff;border:1px solid #ffffff55}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px;margin-top:28px}.wish,.letter{padding:22px 19px;border-radius:22px;border:1px solid #ffffff32;background:#ffffff10;line-height:1.75}.wish b{display:block;font-size:1.3rem;font-weight:normal;color:#f3c6f0;margin-bottom:7px}.flowers{font-size:clamp(3.5rem,13vw,6rem);letter-spacing:.05em;margin:22px 0;filter:drop-shadow(0 8px 15px #12071c)}
+footer{text-align:center;padding:50px 15px 70px}.heart{color:#ff9bd9;animation:beat 1s infinite}@keyframes beat{50%{transform:scale(1.3)}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:5}.secret{margin-top:20px}.secretbox{margin:20px auto 0;max-width:580px;padding:25px;border:1px dashed #edcafa;border-radius:22px;background:#ffffff12;animation:appear .7s ease}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body><div class="stars"></div><canvas id="confetti"></canvas>
+<button class="music hidden" id="music">♫ Play Happy Birthday tune</button>
+<main>
+<section class="screen" id="gate"><div class="glass">
+<div class="eyebrow">✦ a little surprise, made with care ✦</div>
+<h1 class="script">For Sana</h1>
+<p>Is chhoti si surprise duniya mein welcome!<br><strong>Enter your birth year to unlock</strong></p>
+<form id="form"><input id="pass" type="password" inputmode="numeric" maxlength="4" placeholder="Your birth year" aria-label="Your birth year" required><button class="btn">Unlock your gift ♡</button></form>
+<div class="err" id="error"></div><p class="small">Maine aap ke liye ek chhota sa gift banane ki koshish ki hai — hoping it makes you smile. 💜</p>
+</div></section>
+<div id="content" class="hidden">
+<section class="page active" id="page1"><div class="glass">
+<div class="eyebrow">Today, the universe celebrates you</div><div class="cake">🎂<span class="flame">🕯️</span></div>
+<p class="script">A little sparkle for someone special…</p>
+<h1>Happy Birthday<br><span class="script">Sana</span> 💜</h1>
+<p>8 December — a beautiful day made even more beautiful because you were born.</p>
+<p class="small">Tap Next to discover your little surprises ↓</p>
+</div><div class="navrow"><button class="btn" type="button" onclick="showPage(2)">Next ✨</button></div></section>
+<section class="page" id="page2"><div class="inner"><div class="eyebrow">from the heart</div><h2 class="script">A few wishes for you</h2>
+<p>Muhtarma, meri dil se dua hai ke aap ki zindagi ka har aane wala saal pehle se zyada khoobsurat ho.</p>
+<div class="grid">
+<div class="wish"><b>🌷 Khushiyan</b>Allah kare aap ki muskurahat hamesha salamat rahe aur har din aap ke liye koi nayi khushi laaye.</div>
+<div class="wish"><b>✨ Kamyabi</b>Aap ke har khwab ko manzil mile. Aap jis cheez ke liye mehnat karein, us mein behtareen kamyabi naseeb ho.</div>
+<div class="wish"><b>🕊️ Sukoon</b>Aap ke dil ko sukoon, ghar ko barkat aur har qadam par asaniyan milen.</div>
+<div class="wish"><b>💜 Your own magic</b>Kabhi apni qeemat kam mat samajhna. Aap apni jagah bohat khaas hain — exactly the way you are.</div>
+</div></div><div class="navrow"><button class="btn secondary" type="button" onclick="showPage(1)">← Back</button> <button class="btn" type="button" onclick="showPage(3)">Next ✨</button></div></section>
+<section class="page" id="page3"><div class="inner"><div class="eyebrow">a little desi touch</div><h2 class="script">Gulabon ke gajray, just for you 🌹</h2><div class="flowers">🌹🌸🌹🌸🌹</div>
+<div class="letter"><p>Kaash main aap ko ye gulabon ke phoolon ke gajray haqeeqat mein apne haathon se gift kar sakta.</p><p class="script">Filhaal ye virtual gajray qabool kijiye — har phool ke saath ek khoobsurat dua. 💗</p></div></div><div class="navrow"><button class="btn secondary" type="button" onclick="showPage(2)">← Back</button> <button class="btn" type="button" onclick="showPage(4)">Next ✨</button></div></section>
+<section class="page" id="page4"><div class="inner"><div class="eyebrow">one last surprise</div><h2 class="script">Aakhri chhota sa gift…</h2><p>Is button ko press kijiye. Is ke peechay aap ke liye ek aur message chhupa hai.</p>
+<button class="btn secret" id="secretBtn">One last surprise for you… ✨</button>
+<div id="secretBox" class="secretbox hidden"><p>Some gifts are bought, some are made… but this one was created with a little piece of my heart.</p><p class="script">I hope this little effort reminds you how special you are. 💜</p></div>
+</div><div class="navrow"><button class="btn secondary" type="button" onclick="showPage(3)">← Back</button> <button class="btn" type="button" onclick="showPage(5)">Next ✨</button></div></section>
+<section class="page" id="page5"><div class="inner"><div class="eyebrow">before you go</div><h2 class="script">Aap bohat qeemti hain</h2>
+<p>Ye website shayad duniya ka sab se bara gift na ho, lekin is ke har lafz ke peechay ek sincere koshish hai — aap ko special feel karwana aur aap ke chehre par ek smile lana.</p>
+<p>Hamesha apni roshni yunhi bikherte rahiyega, Muhtarma. Happy Birthday once again! 💜</p>
+<div class="letter"><h2 class="script">Aap ka feedback? 💌</h2><p>Muhtarma, aap ko ye chhota sa surprise kaisa laga? Jo bhi dil mein ho, mujhe zaroor batayiyega. Aap ke chand alfaaz mere liye bohat special honge.</p><textarea id="feedbackText" rows="3" placeholder="Yahan apna feedback likhein…" style="display:block;width:100%;max-width:540px;margin:18px auto;padding:14px 16px;border-radius:16px;border:1px solid #edcafa;background:#fff;color:#321b42;font:16px Arial;resize:vertical"></textarea><button class="btn" id="shareFeedback" type="button">Share your feedback 💌</button><p class="small" id="feedbackHint">Button dabane par aap apni pasand ki app se feedback share kar sakti hain.</p></div>
+<p class="script">Some gifts are bought, some are made… but this one was created with a little piece of my heart.</p>
+<p class="script">Made with care, just for Sana <span class="heart">♥</span></p></div><div class="navrow"><button class="btn secondary" type="button" onclick="showPage(4)">← Back</button> </div></section>
+
+</div></main>
+<script>
+const $=id=>document.getElementById(id);
+function showPage(n){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$('page'+n).classList.add('active');window.scrollTo(0,0);}
+$('form').addEventListener('submit',e=>{e.preventDefault();if($('pass').value.trim()==='2002'){$('gate').classList.add('hidden');$('content').classList.remove('hidden');$('music').classList.remove('hidden');showPage(1);burst();startMusic()}else{$('error').textContent='Oops! Dobara try karein, Muhtarma 💜'}});
+$('secretBtn').addEventListener('click',()=>{$('secretBox').classList.remove('hidden');$('secretBtn').textContent='Surprise opened ♡';burst()});
+$('shareFeedback').addEventListener('click',async()=>{
+ const message=$('feedbackText').value.trim();
+ if(!message){$('feedbackHint').textContent='Pehle apna feedback likh dein 💜';$('feedbackText').focus();return}
+ const shareData={title:'Sana birthday surprise feedback',text:'Aapki birthday website ke baare mein mera feedback: '+message};
+ try{
+  if(navigator.share){await navigator.share(shareData);$('feedbackHint').textContent='Thank you! Aapka feedback share karne ka shukriya 💜'}
+  else if(navigator.clipboard){await navigator.clipboard.writeText(shareData.text);$('feedbackHint').textContent='Feedback copy ho gaya hai — ab WhatsApp ya apni pasand ki app mein paste karke bhej dein 💜'}
+  else{$('feedbackHint').textContent='Apna feedback select karke copy karein, phir apni pasand ki app mein bhej dein.'}
+ }catch(err){if(err.name!=='AbortError')$('feedbackHint').textContent='Feedback share nahi ho saka. Text copy karke apni pasand ki app mein bhej dein.'}
+});
+let ctx=null,timer=null,on=false,i=0;
+// Public-domain 'Happy Birthday' melody, played as a gentle instrumental tune.
+const notes=[392,392,440,392,523,494,392,392,440,392,587,523,392,392,784,659,523,494,440,698,698,659,523,587,523];
+const beats=[.38,.18,.56,.56,.56,1.05,.38,.18,.56,.56,.56,1.05,.38,.18,.56,.56,.56,.56,1.05,.38,.18,.56,.56,.56,1.1];
+function note(f,d){let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.105,ctx.currentTime+.035);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+d*.88);o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+d)}
+function playNext(){if(!on)return;const d=beats[i];note(notes[i],d);i=(i+1)%notes.length;timer=setTimeout(playNext,d*1000+35)}
+function stop(){clearTimeout(timer);on=false;$('music').textContent='♫ Play Happy Birthday tune'}
+function startMusic(){if(on)return;try{ctx=ctx||new(window.AudioContext||window.webkitAudioContext)();const p=ctx.resume();if(p&&p.catch)p.catch(()=>{});on=true;$('music').textContent='♫ Pause Happy Birthday tune';playNext()}catch(err){on=false;$('music').textContent='♫ Play Happy Birthday tune'}}
+$('music').onclick=()=>{if(on){stop();return}startMusic()};
+function burst(){const c=$('confetti'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;let a=Array.from({length:120},()=>({x:Math.random()*c.width,y:-Math.random()*c.height,v:2+Math.random()*4,s:3+Math.random()*5}));let n=0;function draw(){x.clearRect(0,0,c.width,c.height);a.forEach(b=>{b.y+=b.v;b.x+=Math.sin(b.y/20);x.fillStyle=['#f4c6ef','#d8a7ff','#fff1a8','#fff'][Math.floor(b.s)%4];x.fillRect(b.x,b.y,b.s,b.s*1.7)});if(++n<170)requestAnimationFrame(draw);else x.clearRect(0,0,c.width,c.height)}draw()}
+</script></body></html>
